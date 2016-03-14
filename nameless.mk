@@ -18,13 +18,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+# Inherit toolchains
+$(call inherit-product, vendor/nameless/config/common.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit enhanced nfc
+$(call inherit-product, vendor/nameless/config/nfc_enhanced.mk)
 
-PRODUCT_NAME := cm_bacon
+
+PRODUCT_NAME := nameless_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
